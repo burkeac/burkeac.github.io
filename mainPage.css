@@ -1,0 +1,89 @@
+
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after{
+    animation-play-state: paused !important;
+}
+
+
+@-webkit-keyframes nameSlide {
+    0% {transform: translateY(-5vh);opacity: 0;}
+    100% {transform: translateY(0vh); opacity: 1;}
+}
+@keyframes nameSlide {
+    0% {transform: translateY(-5vh);opacity: 0;}
+    100% {transform: translateY(0vh); opacity: 1;}
+}
+
+@-webkit-keyframes iconSlide{
+    0% {transform: translateY(5vh); opacity: 0;}
+    100% {transform: translateY(0vh);opacity: 1;}
+}
+@keyframes iconSlide{
+    0% {transform: translateY(5vh); opacity: 0;}
+    100% {transform: translateY(0vh);opacity: 1;}
+}
+
+@-webkit-keyframes fadeImage{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeImage{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.mainScreen{
+    height: 100vh; 
+    /* background-color: black; */
+    background-image: url('background_S.jpg'); 
+    background-size: cover; 
+    -webkit-background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    animation-name: fadeImage;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+}
+.mainScreenContent{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.name{
+    /* font-family: 'Courgette', cursive; */
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 7vw;
+    animation-name: nameSlide;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+.iconTray{
+    color: white;
+    font-size: 3.5vw;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1.5vh;
+    animation-name: iconSlide;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+.copyright{
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+
+}
